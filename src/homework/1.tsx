@@ -28,6 +28,7 @@ export function Observer({ children, onContentEndVisible }: Props) {
       root: null,
     };
 
+    // тут допоміг GPT бо я в душі не ... що за IntersectionObserver :)))
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
