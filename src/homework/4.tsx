@@ -1,3 +1,17 @@
+// # Завдання 4
+
+// Ви вирішили застосувати до меню контекст і тепер вам потрібно його типізувати.
+
+// Описати тип SelectedMenu: Це має бути об'єкт, який містить id з типом MenuIds
+
+// Описати тип MenuSelected: Цей тип є об'єктом, що містить selectedMenu
+
+// Описати тип MenuAction: Цей тип являє собою об'єкт з методом onSelectedMenu, який приймає об'єкт типу SelectedMenu як аргумент повертає void.
+
+// Описати тип PropsProvider: Опишіть правильний тип для дітей
+
+// Описати тип PropsMenu: Опишіть тип для menus, він має бути від типу Menu
+
 import React, { createContext, useMemo, useState, useContext } from "react";
 import noop from "lodash/noop";
 
@@ -28,14 +42,14 @@ function MenuProvider({ children }: PropsProvider) {
     () => ({
       onSelectedMenu: setSelectedMenu,
     }),
-    []
+    [],
   );
 
   const menuContextSelected = useMemo(
     () => ({
       selectedMenu,
     }),
-    [selectedMenu]
+    [selectedMenu],
   );
 
   return (
